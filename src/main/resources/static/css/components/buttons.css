@@ -1,0 +1,18 @@
+/* BUTTON COMPONENT
+   .hv-btn and its variants (primary, orange, ghost, light, danger, sizes). */
+.hv-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 2px solid transparent; cursor: pointer;
+    padding: 11px 22px; border-radius: 999px; font: 700 14px var(--hv-font); text-decoration: none; transition: transform .2s, box-shadow .2s, background .2s, color .2s, border-color .2s; white-space: nowrap;
+}
+.hv-btn:hover { transform: translateY(-2px); }
+.hv-btn-primary { background: var(--hv-green); color: #fff; box-shadow: 0 10px 22px -10px rgba(45, 154, 104, .9); }
+.hv-btn-primary:hover { background: var(--hv-forest); }
+.hv-btn-orange { background: var(--hv-orange); color: #fff; box-shadow: 0 10px 22px -10px rgba(255, 138, 61, .95); }
+.hv-btn-orange:hover { background: var(--hv-orange-d); }
+.hv-btn-ghost { background: transparent; color: var(--hv-text-strong, var(--hv-heading)); border-color: var(--hv-line); }
+.hv-btn-ghost:hover { border-color: var(--hv-forest); background: var(--hv-surface, #fff); }
+.hv-btn-light { background: var(--hv-surface, #fff); color: var(--hv-text-strong, var(--hv-heading)); }
+.hv-btn-light:hover { background: var(--hv-cream); }
+.hv-btn-lg { padding: 15px 30px; font-size: 15.5px; }
+.hv-btn-danger { background: var(--hv-danger); color: #fff; }
+.hv-btn-danger:hover { background: #b93a30; }

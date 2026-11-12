@@ -1,0 +1,87 @@
+/* Add styles for order confirmation */
+.confirmation-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--hv-surface, white);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.confirmation-icon {
+    font-size: 80px;
+    color: var(--hv-ac-green, #1f8a5b);
+    margin-bottom: 20px;
+}
+
+.confirmation-title {
+    color: var(--hv-text-strong, #214a38);
+    margin-bottom: 15px;
+}
+
+.confirmation-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.order-details {
+    background: var(--hv-page, #f3faf5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--hv-border-soft, #ecf0f1);
+}
+
+.detail-label {
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.detail-value {
+    color: var(--hv-text-strong, #214a38);
+}
+
+.btn-primary {
+    background: #4cb98a;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2d9a68;
+}
+
+.btn-secondary {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #2980b9;
+}

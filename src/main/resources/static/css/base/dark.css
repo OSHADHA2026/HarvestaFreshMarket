@@ -1,0 +1,74 @@
+/* =====================================================================
+   DARK THEME
+   Activated by <html data-theme="dark"> (set by the navbar toggle, remembered in
+   localStorage, defaults to the visitor's OS preference — see partials/head-assets.jsp).
+
+   How it works: every light colour in the stylesheets is written as
+       var(--hv-<token>, <original light colour>)
+   so light mode uses the literal colour and dark mode only needs the tokens below.
+   To tune dark mode, edit this file — nothing else.
+   ===================================================================== */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* surfaces (backgrounds) */
+    --hv-page: #0e1612;          /* page canvas */
+    --hv-surface: #16211b;       /* cards, panels, inputs */
+    --hv-tint: #1d2c24;          /* soft green tint / hover fill */
+    --hv-sunken: #263a30;        /* progress tracks, skeletons */
+    --hv-tint-red: #3a201e;
+    --hv-tint-amber: #392d17;
+    --hv-tint-blue: #19283a;
+    --hv-tint-purple: #2b2038;
+    --hv-tint-teal: #153431;
+
+    /* borders / dividers */
+    --hv-border: #2c4036;
+    --hv-border-soft: #243529;
+    --hv-line: #2c4036;          /* design-system token from base/theme.css */
+
+    /* text */
+    --hv-text-strong: #eaf5ee;   /* headings */
+    --hv-text: #cfe2d6;          /* body copy */
+    --hv-text-soft: #a3bbab;     /* secondary copy */
+    --hv-ac-green: #4fd08e;
+    --hv-heading: #eaf5ee;
+    --hv-green-text: #4fd08e;
+    --hv-ac-red: #ff8f84;
+    --hv-ac-amber: #ffb35f;
+    --hv-ac-blue: #7db8f0;
+    --hv-ac-purple: #c79cf0;
+    --hv-ac-teal: #4fd1d4;
+
+    /* design-system tokens from base/theme.css */
+    --hv-ink: #e3f0e8;
+    --hv-muted: #9bb5a5;
+    --hv-mint: #1d2c24;
+    --hv-mint-2: #121b16;
+    --hv-cream: #2a2418;
+    --hv-white: #16211b;
+    --hv-shadow-sm: 0 2px 10px rgba(0, 0, 0, .35);
+    --hv-shadow-md: 0 14px 34px -12px rgba(0, 0, 0, .6);
+    --hv-shadow-lg: 0 30px 60px -22px rgba(0, 0, 0, .7);
+}
+
+/* base */
+html[data-theme="dark"] body { background-color: var(--hv-page); color: var(--hv-text); }
+html[data-theme="dark"] ::selection { background: #2f6b4d; color: #fff; }
+html[data-theme="dark"] ::placeholder { color: #7f9a8a; }
+html[data-theme="dark"] input, html[data-theme="dark"] select, html[data-theme="dark"] textarea { color: var(--hv-text-strong); }
+html[data-theme="dark"] option { background: var(--hv-surface); color: var(--hv-text-strong); }
+html[data-theme="dark"] hr { border-color: var(--hv-line); }
+
+/* photography: slightly tone down so it does not glare on dark surfaces */
+html[data-theme="dark"] img:not([src$=".svg"]) { filter: brightness(.92) contrast(1.02); }
+
+/* third-party map embed */
+html[data-theme="dark"] .map-container iframe { filter: invert(.92) hue-rotate(180deg) brightness(.95) contrast(.92); }
+
+/* glass bars that are written with translucent white */
+html[data-theme="dark"] .hv-nav { background: rgba(14, 22, 18, .86); }
+html[data-theme="dark"] .products-toolbar { background: rgba(22, 33, 27, .94); }
+
+/* scrollbars */
+html[data-theme="dark"] * { scrollbar-color: #35503f transparent; }

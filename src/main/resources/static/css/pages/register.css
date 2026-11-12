@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--hv-page, #f4f4f4);
+    background-image: url('/images/auth/register-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.signup-card {
+    background: var(--hv-surface, white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.signup-title {
+    color: var(--hv-ac-green, #1f8a5b);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.signup-subtitle {
+    color: var(--hv-text-soft, #666);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--hv-text-strong, #333);
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--hv-border, #ddd);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4cb98a;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--hv-text-soft, #666);
+    font-size: 14px;
+}
+
+.toggle-password:hover {
+    color: var(--hv-ac-green, #1f8a5b);
+}
+
+.name-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+.password-requirements {
+    font-size: 12px;
+    color: var(--hv-text-soft, #666);
+    margin-top: 5px;
+}
+
+.btn-signup {
+    background-color: #4cb98a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.btn-signup:hover {
+    background-color: #2d9a68;
+    transform: translateY(-2px);
+}
+
+.btn-signup:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.divider {
+    margin: 25px 0;
+    position: relative;
+    text-align: center;
+    color: #999;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--hv-sunken, #ddd);
+}
+
+.divider-text {
+    background: var(--hv-surface, white);
+    padding: 0 15px;
+    position: relative;
+}
+
+.login-link {
+    color: var(--hv-text-soft, #666);
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: var(--hv-ac-green, #1f8a5b);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background-color: var(--hv-tint-amber, #ffeaa7);
+    color: var(--hv-ac-red, #d63031);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #d63031;
+    display: none;
+}
+
+.success-message {
+    background-color: #55efc4;
+    color: var(--hv-ac-teal, #00b894);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00b894;
+    display: none;
+}
+
+.terms {
+    font-size: 14px;
+    color: var(--hv-text-soft, #666);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.terms a {
+    color: var(--hv-ac-green, #1f8a5b);
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.password-strength {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.strength-weak {
+    background-color: #e74c3c;
+    width: 25%;
+}
+
+.strength-medium {
+    background-color: #ff8a3d;
+    width: 50%;
+}
+
+.strength-strong {
+    background-color: #4cb98a;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .signup-card {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}

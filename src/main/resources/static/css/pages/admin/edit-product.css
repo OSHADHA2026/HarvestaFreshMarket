@@ -1,0 +1,47 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--hv-page, #f3faf5); color: var(--hv-text-strong, #214a38); }
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 24px; color: var(--hv-text-strong, #214a38); }
+.card { background: var(--hv-surface, #fff); padding: 30px; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--hv-text-strong, #27493b); }
+.form-group input, .form-group textarea, .form-group select { 
+    width: 100%; 
+    padding: 12px; 
+    border: 2px solid var(--hv-border, #e0e0e0); 
+    border-radius: 6px; 
+    font-size: 14px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.checkbox-group { display: flex; align-items: center; gap: 10px; }
+.checkbox-group input[type="checkbox"] { width: auto; }
+.btn { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    border-radius: 6px; 
+    background: #3498db; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 600; 
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.btn:hover { background: #2980b9; }
+.btn-secondary { background: #95a5a6; }
+.btn-secondary:hover { background: #7f8c8d; }
+.btn-success { background: #4cb98a; }
+.btn-success:hover { background: #2d9a68; }
+.btn-group { display: flex; gap: 10px; margin-top: 20px; }
+.alert { padding: 12px; border-radius: 6px; margin-bottom: 20px; }
+.alert-success { background: var(--hv-tint, #d4edda); color: var(--hv-text-strong, #155724); border: 1px solid var(--hv-border, #c3e6cb); }
+.alert-error { background: var(--hv-tint-red, #f8d7da); color: var(--hv-ac-red, #721c24); border: 1px solid var(--hv-border, #f5c6cb); }
+.required { color: var(--hv-ac-red, #e74c3c); }

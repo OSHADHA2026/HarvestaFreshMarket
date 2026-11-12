@@ -1,0 +1,14 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--hv-page, #f3faf5); color: var(--hv-text-strong, #214a38); }
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+.title { font-size: 26px; font-weight: 700; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { background: var(--hv-surface, #fff); padding: 18px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 10px; }
+.card h3 { margin: 0; font-size: 18px; }
+.card p { margin: 0; color: var(--hv-text-soft, #6c7a89); line-height: 1.5; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; color: #fff; }
+.primary { background: #3498db; }
+.secondary { background: #7f8c8d; }
+.tertiary { background: #4cb98a; }
+.meta { font-size: 13px; color: #95a5a6; }

@@ -1,0 +1,70 @@
+/* BASE THEME
+   Design tokens (colours, radii, shadows, fonts), keyframes and global typography/form polish. Loaded on every page. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+    --hv-ink: #1f4535;
+    --hv-forest: #2b8f63;
+    --hv-green: #2d9a68;
+    --hv-leaf: #4cb98a;
+    --hv-heading: #1d6b49;       /* headings & strong text on light surfaces */
+    --hv-green-text: #1f8a5b;    /* green links / accents on light surfaces */
+    --hv-mint: #e8f6ec;
+    --hv-mint-2: #f3faf5;
+    --hv-cream: #fff9ee;
+    --hv-orange: #ff8a3d;
+    --hv-orange-d: #e9701f;
+    --hv-line: #dcebe2;
+    --hv-muted: #5b7468;
+    --hv-white: #ffffff;
+    --hv-danger: #d9473b;
+    --hv-r-sm: 12px;
+    --hv-r-md: 18px;
+    --hv-r-lg: 28px;
+    --hv-shadow-sm: 0 2px 10px rgba(31, 107, 73, .07);
+    --hv-shadow-md: 0 14px 34px -12px rgba(31, 107, 73, .22);
+    --hv-shadow-lg: 0 30px 60px -22px rgba(31, 107, 73, .35);
+    --hv-font: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --hv-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes hvFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.hv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---- global page polish (typography, focus, selection) ---- */
+body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--hv-text-strong, #214a38);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* soft mint canvas wherever a page used a flat grey one (login/register keep their photo) */
+body:not([class]) { background-color: var(--hv-page, #f3faf5); }
+
+h1, h2, .page-title, .products-title, .checkout-title, .payment-title, .cart-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    letter-spacing: -.3px;
+}
+
+/* icon rhythm: Font Awesome glyphs that replaced emoji */
+i.fa-solid, i.fa-regular, i.fa-brands { line-height: 1; }
+button > i.fa-solid:first-child:not(:last-child),
+a > i.fa-solid:first-child:not(:last-child) { margin-right: .45em; }
+.emoji-fallback, .fallback-icon { color: var(--hv-ac-green, #1f8a5b); }
+
+/* friendlier form controls everywhere */
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"],
+input[type="number"], input[type="search"], select, textarea {
+    font-family: inherit;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4cb98a !important;
+    box-shadow: 0 0 0 4px rgba(76, 185, 138, .16);
+}
+
+/* selection + scrollbar polish */
+::selection { background: var(--hv-tint, #bfe9cf); color: var(--hv-text-strong, #1d6b49); }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

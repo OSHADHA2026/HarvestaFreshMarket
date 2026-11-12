@@ -1,0 +1,31 @@
+/* FOOTER COMPONENT
+   Markup: views/partials/footer.jsp */
+/* ----------------------------------------------------------------- FOOTER */
+.hv-footer { background: var(--hv-forest); color: #f2fbf6; font-family: var(--hv-font); margin-top: 72px; position: relative; }
+.hv-footer-in { max-width: 1240px; margin: 0 auto; padding: 64px 24px 28px; }
+.hv-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.3fr; gap: 44px; }
+.hv-footer .hv-brand-text b { color: #fff; }
+.hv-footer .hv-brand-text small { color: #e3f6ec; }
+.hv-footer-desc { margin: 18px 0 20px; line-height: 1.7; font-size: 14px; max-width: 320px; }
+.hv-social { display: flex; gap: 10px; }
+.hv-social a { width: 40px; height: 40px; border-radius: 12px; background: rgba(255, 255, 255, .09); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: background .2s, transform .2s; }
+.hv-social a:hover { background: var(--hv-orange); transform: translateY(-3px); }
+.hv-footer h4 { margin: 4px 0 18px; color: #fff; font: 700 16px var(--hv-display); letter-spacing: .2px; }
+.hv-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.hv-footer ul a, .hv-footer .hv-contact a { color: #f2fbf6; text-decoration: none; font-size: 14px; transition: color .2s, padding .2s; }
+.hv-footer ul a:hover, .hv-footer .hv-contact a:hover { color: #fff; }
+.hv-footer ul a:hover { padding-left: 4px; }
+.hv-contact { display: grid; gap: 13px; font-size: 14px; }
+.hv-contact p { margin: 0; display: flex; gap: 12px; align-items: flex-start; line-height: 1.5; }
+.hv-contact i { color: var(--hv-orange); width: 16px; margin-top: 3px; text-align: center; }
+.hv-footer-bottom { margin-top: 48px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+.hv-pay { display: flex; gap: 12px; font-size: 30px; color: #e3f6ec; align-items: center; }
+.hv-pay i { transition: color .2s; }
+.hv-pay i:hover { color: #fff; }
+@media (max-width: 1100px) {
+    .hv-footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hv-footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hv-footer-bottom { flex-direction: column; text-align: center; }
+}

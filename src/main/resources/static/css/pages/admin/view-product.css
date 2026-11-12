@@ -1,0 +1,38 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--hv-page, #f3faf5); color: var(--hv-text-strong, #214a38); }
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 24px; color: var(--hv-text-strong, #214a38); }
+.card { background: var(--hv-surface, #fff); padding: 30px; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+.product-details { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 30px; }
+.product-image-section { text-align: center; }
+.product-image { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.product-info h2 { margin-top: 0; color: var(--hv-text-strong, #214a38); }
+.info-row { display: flex; padding: 12px 0; border-bottom: 1px solid var(--hv-border, #e0e0e0); }
+.info-label { font-weight: 600; width: 200px; color: #7f8c8d; }
+.info-value { flex: 1; color: var(--hv-text-strong, #214a38); }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px; }
+.badge-featured { background: #3498db; color: white; }
+.badge-deal { background: #e74c3c; color: white; }
+.stock-badge { padding: 6px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; }
+.stock-in { background: var(--hv-tint, #d4edda); color: var(--hv-text-strong, #155724); }
+.stock-low { background: var(--hv-tint-amber, #fff3cd); color: var(--hv-ac-amber, #856404); }
+.stock-out { background: var(--hv-tint-red, #f8d7da); color: var(--hv-ac-red, #721c24); }
+.btn { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    border-radius: 6px; 
+    background: #3498db; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 600; 
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    margin-right: 10px;
+}
+.btn:hover { opacity: 0.9; }
+.btn-secondary { background: #95a5a6; }
+.btn-warning { background: #ff8a3d; }
+.btn-group { margin-top: 20px; }
+.price-section { font-size: 24px; font-weight: bold; color: var(--hv-ac-green, #1f8a5b); margin: 15px 0; }
+.original-price { text-decoration: line-through; color: #7f8c8d; font-size: 18px; margin-left: 10px; }

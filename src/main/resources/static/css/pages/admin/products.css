@@ -1,0 +1,197 @@
+/* Prevent layout shifts and vibrations */
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    background: var(--hv-page, #f3faf5); 
+    color: var(--hv-text-strong, #214a38);
+    /* Prevent visual vibrations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Stabilize rendering */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 24px;
+    /* Prevent layout shifts */
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+
+h1 { margin: 0 0 16px; }
+
+.card { 
+    background: var(--hv-surface, #fff); 
+    padding: 18px; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    /* Stabilize card rendering */
+    transform: translateZ(0);
+    will-change: auto;
+}
+
+.muted { color: #7f8c8d; }
+
+.btn { 
+    display: inline-block; 
+    padding: 10px 14px; 
+    border-radius: 6px; 
+    background: #3498db; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 600; 
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    /* Prevent button vibration */
+    transform: translateZ(0);
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover { opacity: 0.9; }
+.back { background: #95a5a6; }
+.btn-success { background: #4cb98a; }
+.btn-danger { background: #e74c3c; }
+.btn-warning { background: #ff8a3d; }
+.btn-info { background: #3498db; }
+
+.header-actions { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    /* Stabilize header */
+    position: relative;
+    z-index: 1;
+}
+
+.products-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    /* Stabilize table rendering */
+    table-layout: fixed;
+}
+
+.products-table th, .products-table td { 
+    padding: 12px; 
+    text-align: left; 
+    border-bottom: 1px solid var(--hv-border, #e0e0e0);
+    /* Prevent cell vibration */
+    vertical-align: middle;
+}
+
+.products-table th { 
+    background: var(--hv-page, #f3faf5); 
+    font-weight: 600; 
+    color: var(--hv-text-strong, #214a38);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.products-table tr { 
+    /* Stabilize row rendering */
+    transform: translateZ(0);
+}
+
+.products-table tr:hover { background: var(--hv-page, #f3faf5); }
+
+.product-image { 
+    width: 60px; 
+    height: 60px; 
+    object-fit: cover; 
+    border-radius: 6px;
+    /* Prevent image loading shifts */
+    display: block;
+    background: var(--hv-tint, #f0f0f0);
+}
+
+.action-buttons { 
+    display: flex; 
+    gap: 8px;
+    /* Stabilize button container */
+    align-items: center;
+}
+
+.action-buttons .btn { 
+    margin: 0; 
+    padding: 6px 12px; 
+    font-size: 12px; 
+}
+
+.stock-badge { 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 12px; 
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.stock-in { background: var(--hv-tint, #d4edda); color: var(--hv-text-strong, #155724); }
+.stock-low { background: var(--hv-tint-amber, #fff3cd); color: var(--hv-ac-amber, #856404); }
+.stock-out { background: var(--hv-tint-red, #f8d7da); color: var(--hv-ac-red, #721c24); }
+
+.alert { 
+    padding: 12px; 
+    border-radius: 6px; 
+    margin-bottom: 20px;
+    /* Stabilize alert rendering */
+    position: relative;
+}
+
+.alert-success { background: var(--hv-tint, #d4edda); color: var(--hv-text-strong, #155724); border: 1px solid var(--hv-border, #c3e6cb); }
+.alert-error { background: var(--hv-tint-red, #f8d7da); color: var(--hv-ac-red, #721c24); border: 1px solid var(--hv-border, #f5c6cb); }
+
+.badge { 
+    display: inline-block; 
+    padding: 2px 8px; 
+    border-radius: 12px; 
+    font-size: 11px; 
+    font-weight: 600; 
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.badge-featured { background: #3498db; color: white; }
+.badge-deal { background: #e74c3c; color: white; }
+
+.delete-form { 
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.empty-state { 
+    text-align: center; 
+    padding: 40px; 
+    color: #7f8c8d; 
+}
+
+/* Prevent any animations that might cause vibration */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Stabilize all interactive elements */
+button, a, input, select, textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

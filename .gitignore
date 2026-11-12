@@ -1,0 +1,26 @@
+# Build output
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE / editor
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.sts4-cache/
+.apt_generated
+.factorypath
+.springBeans
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# OS / logs
+.DS_Store
+*.log
+
+# Local configuration (keep real credentials out of git)
+application-local.properties
