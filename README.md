@@ -7,11 +7,6 @@ Online supermarket built with Spring Boot, JPA and JSP/JSTL.
 ```bash
 ./mvnw spring-boot:run          # or: mvn clean package && java -jar target/*.jar
 ```
-
-Database settings live in `src/main/resources/application.properties`.
-After changing anything under `src/main/resources/static`, restart (or run `mvn clean package`)
-and hard-refresh the browser (Ctrl+F5) so the new CSS/JS is served.
-
 ## Project layout
 
 ```
