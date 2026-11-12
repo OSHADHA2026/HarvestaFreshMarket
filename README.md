@@ -93,10 +93,4 @@ A controller returns the view path relative to `views/`, e.g. `return "shop/prod
 - **Icons:** Font Awesome (loaded in `head-assets.jsp`). No emoji in the UI.
 - **Renaming the brand:** search for `Harvesta`, `HARVEST` (phone) and `harvesta.com` (email).
 
-## Known issues in the original code (not changed)
-
-- Product cards no longer link to `/products/{id}` (that route returns the missing `product-detail` view). If you add a detail page later, wrap the card image/title in a link again.
-- Controllers return view names that have no JSP: `product-detail`, `payment-success`, `payment-error`,
-  `orders`, `contact`, `forgot-password`. Those routes will error until the pages are created.
-- `HomeController` exposes `/navbar` and `/footer` as routes; they only render the partials and can be deleted.
-- Contact page address and map, footer address and phone are placeholders.
+ address and map, footer address and phone are placeholders.
